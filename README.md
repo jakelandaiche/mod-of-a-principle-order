@@ -1,1 +1,0 @@
-# mod-of-a-principle-order
