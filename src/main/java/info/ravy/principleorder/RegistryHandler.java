@@ -4,6 +4,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.*;
@@ -26,8 +27,9 @@ public class RegistryHandler {
     // register copper ore block
     public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", () ->
         new Block(
-                AbstractBlock.Properties.create(Material.STONE)
-                .hardnessAndResistance(5.0f, 6.0f)
+                AbstractBlock.Properties
+                .of(Material.STONE)
+                .strength(5.0f, 6.0f)
                 .sound(SoundType.STONE)
                 .harvestLevel(1)
                 .harvestTool(ToolType.PICKAXE)
@@ -37,6 +39,13 @@ public class RegistryHandler {
     public static final RegistryObject<Item> COPPER = ITEMS.register("copper", () ->
             new Item(
                     new Item.Properties().tab(ItemGroup.TAB_MATERIALS)
+            )
+    );
+
+    public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore", () ->
+            new BlockItem(
+                    COPPER_ORE.get(),
+                    new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)
             )
     );
 }
