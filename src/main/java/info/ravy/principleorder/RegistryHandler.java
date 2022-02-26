@@ -35,6 +35,17 @@ public class RegistryHandler {
                 .harvestTool(ToolType.PICKAXE)
         )
     );
+    // register solid copper block
+    public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", () ->
+            new Block(
+                    AbstractBlock.Properties
+                            .of(Material.METAL)
+                            .strength(7.0f, 6.0f)
+                            .sound(SoundType.METAL)
+                            .harvestLevel(1)
+                            .harvestTool(ToolType.PICKAXE)
+            )
+    );
     // register item
     public static final RegistryObject<Item> COPPER = ITEMS.register("copper", () ->
             new Item(
@@ -42,9 +53,17 @@ public class RegistryHandler {
             )
     );
 
+
     public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore", () ->
             new BlockItem(
                     COPPER_ORE.get(),
+                    new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)
+            )
+    );
+
+    public static final RegistryObject<Item> COPPER_BLOCK_ITEM = ITEMS.register("copper_block", () ->
+            new BlockItem(
+                    COPPER_BLOCK.get(),
                     new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)
             )
     );
