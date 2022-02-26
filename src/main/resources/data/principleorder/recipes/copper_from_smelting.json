@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "copper",
+    "ingredient":
+    {
+        "item": "principleorder:copper_ore"
+    },
+    "result": "principleorder:copper",
+    "experience": 0.7
+}

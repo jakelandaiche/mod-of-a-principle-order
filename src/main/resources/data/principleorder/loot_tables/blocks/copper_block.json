@@ -6,12 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "principleorder:copper_block",
-          "conditions": [
-            {
-              "condition": "minecraft:match_tool"
-            }
-          ]
+          "name": "principleorder:copper_block"
         }
       ]
     }

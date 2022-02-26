@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "copper",
+  "ingredients": [
+    {
+      "item": "principleorder:copper_block"
+    }
+  ],
+  "result": {
+    "item": "principleorder:copper",
+    "count": 9
+  }
+}

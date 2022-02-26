@@ -45,11 +45,6 @@
                     "bonusMultiplier": 1
                   }
                 }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool"
-                }
               ]
             }
           ]
